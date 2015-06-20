@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_31" class="java.beans.XMLDecoder">
+ <object class="miniproject.config.Configuration">
+  <void property="contourDetectionMethod">
+   <int>1</int>
+  </void>
+  <void property="customAlertText">
+   <string>Intrusion Detected! 555#</string>
+  </void>
+  <void property="emailEnabled">
+   <boolean>false</boolean>
+  </void>
+  <void property="motionDetectionRate">
+   <int>60</int>
+  </void>
+  <void property="nextSmsAlertIntervalMins">
+   <int>1</int>
+  </void>
+  <void property="recordTimeContSecs">
+   <int>20</int>
+  </void>
+  <void property="recordTimeDetectionSecs">
+   <int>10</int>
+  </void>
+  <void property="smsCustomAlertText">
+   <string>Intrusion Detected! 555#</string>
+  </void>
+  <void property="thresholdMethod">
+   <int>1</int>
+  </void>
+  <void property="toPhoneNumber">
+   <string>+918129484801</string>
+  </void>
+ </object>
+</java>

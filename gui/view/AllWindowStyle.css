@@ -1,0 +1,61 @@
+BorderPane{
+	-fx-background-color:#202020;
+} 
+Label{
+	-fx-text-fill:#ffffff;
+}
+TableView{
+	-fx-background-color:#b6b6b6;
+	-fx-text-fill: #000000;
+	-fx-border-radius: 0px;
+	-fx-border-width: 0px;
+}
+TableView Label{
+	-fx-text-fill: #263238;
+}
+Button{
+	-fx-border-radius: 0 0 0 0;
+	-fx-background-color: #b81d18;
+	-fx-text-fill: #ffffff;
+	-fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 1, 0, 2, 2);
+}
+MenuBar{
+	-fx-background-color: #b6b6b6;
+}
+TextField{
+	-fx-border-radius: 0px;
+	-fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 1, 0, 2, 2);
+	-fx-background-color: #ffffff;
+}
+TabPane{
+	-fx-background-color:#202020;
+}
+Tabpane Tab{
+	-fx-background-color:#202020;	
+}
+ChoiceBox{
+	-fx-background-color: #b81d18;
+}
+CheckBox{
+	-fx-text-fill: #ffffff;
+	
+}
+Slider{
+	-fx-text-fill: #ffffff;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #b81d18;
+}
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+.tab-header-background {
+    -fx-opacity: 0;
+}
+.tab-pane .tab:selected
+{
+    -fx-background-color: #202020;
+    -fx-border:0px;
+}

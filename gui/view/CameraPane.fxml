@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miniproject.gui.controller.CameraPaneController">
+   <center>
+      <BorderPane prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="cameraTable" onMouseClicked="#handleTableRowSelectAction" prefHeight="380.0" prefWidth="251.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="cameraTableColId" prefWidth="32.0" text="ID" />
+                <TableColumn fx:id="cameraTableColName" prefWidth="72.0" text="Name" />
+                  <TableColumn fx:id="cameraTableColMode" minWidth="0.0" prefWidth="69.0" text="Mode" />
+                  <TableColumn fx:id="cameraTableColStatus" text="Status" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <right>
+            <AnchorPane prefHeight="374.0" prefWidth="148.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="startStopButton" alignment="CENTER" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStartStopButtonAction" prefHeight="50.0" prefWidth="120.0" text="Start" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="14.0" />
+                  <Button fx:id="viewButton" alignment="CENTER" layoutX="12.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleViewButtonAction" prefHeight="50.0" prefWidth="120.0" text="View" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="83.0" />
+                  <Button alignment="CENTER" layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleConfigButtonAction" prefHeight="50.0" prefWidth="120.0" text="Configure" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="16.0" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </center>
+   <top>
+      <Pane prefHeight="20.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="7.0" layoutY="1.0" prefHeight="17.0" prefWidth="90.0" text="Cameras" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>

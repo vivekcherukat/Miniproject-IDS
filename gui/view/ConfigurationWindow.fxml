@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="355.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miniproject.gui.controller.ConfigurationWindowController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="System      ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="Video Storage Location:" />
+                        <TextField fx:id="videoStorageLocationField" layoutX="177.0" layoutY="21.0" prefHeight="25.0" prefWidth="426.0" />
+                        <Label layoutX="15.0" layoutY="76.0" text="Image Storage Location:" />
+                        <TextField fx:id="imageStorageLocationField" layoutX="178.0" layoutY="72.0" prefHeight="25.0" prefWidth="426.0" />
+                        <CheckBox fx:id="alertsEnabledCheckBox" layoutX="177.0" layoutY="125.0" mnemonicParsing="false" text="Alerts" />
+                        <CheckBox fx:id="uploadEnabledCheckBox" layoutX="277.0" layoutY="125.0" mnemonicParsing="false" text="Uploads" />
+                        <CheckBox fx:id="emailEnabledCheckBox" layoutX="377.0" layoutY="125.0" mnemonicParsing="false" text="Email Alerts" />
+                        <CheckBox fx:id="smsEnabledCheckBox" layoutX="477.0" layoutY="125.0" mnemonicParsing="false" text="SMS Alerts" />
+                        <Label layoutX="177.0" layoutY="193.0" text="Alert Interval:" />
+                        <TextField fx:id="alertIntervalField" layoutX="262.0" layoutY="189.0" prefHeight="25.0" prefWidth="64.0" />
+                        <Label layoutX="430.0" layoutY="193.0" text="SMS Alert Interval:" />
+                        <TextField fx:id="smsAlertIntervalField" layoutX="539.0" layoutY="189.0" prefHeight="25.0" prefWidth="64.0" />
+                        <Label layoutX="328.0" layoutY="193.0" text="MS" />
+                        <Label layoutX="605.0" layoutY="193.0" text="M" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Detection   ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="22.0" text="Detection Rate:" />
+                        <Slider fx:id="motionDetectionRateSlider" layoutX="186.0" layoutY="24.0" onMouseClicked="#handleMotionDetectionRateSliderMoveAction" onMouseDragged="#handleMotionDetectionRateSliderMoveAction" prefHeight="14.0" prefWidth="374.0" />
+                        <Label fx:id="motionDetectionRateLabel" layoutX="578.0" layoutY="23.0" text="V" />
+                        <Label layoutX="14.0" layoutY="72.0" text="Threshold Method:" />
+                        <ChoiceBox fx:id="thresholdMethodChoiceBox" layoutX="186.0" layoutY="68.0" prefHeight="25.0" prefWidth="370.0" />
+                        <Label layoutX="14.0" layoutY="115.0" text="Contour Detection Method:" />
+                        <ChoiceBox fx:id="contourDetectionMethodChoiceBox" layoutX="186.0" layoutY="111.0" prefHeight="25.0" prefWidth="370.0" />
+                        <Label layoutX="14.0" layoutY="176.0" text="Adaptive Threshold Size:" />
+                        <Label layoutX="186.0" layoutY="176.0" prefHeight="17.0" prefWidth="21.0" text="X" />
+                        <TextField fx:id="adaptiveThresholdRectSizeXField" layoutX="207.0" layoutY="172.0" prefHeight="25.0" prefWidth="40.0" />
+                        <Label layoutX="265.0" layoutY="176.0" prefHeight="17.0" prefWidth="21.0" text="Y" />
+                        <TextField fx:id="adaptiveThresholdRectSizeYField" layoutX="286.0" layoutY="172.0" prefHeight="25.0" prefWidth="40.0" />
+                        <CheckBox fx:id="highLightMovingObjectsChoiceBox" layoutX="186.0" layoutY="228.0" mnemonicParsing="false" text="Highlight Moving Objects" />
+                        <Label layoutX="419.0" layoutY="228.0" prefHeight="17.0" prefWidth="50.0" text="Width:" />
+                        <TextField fx:id="movingObjectHighlightBoxWidthField" layoutX="469.0" layoutY="224.0" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Email       ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="40.0" layoutY="24.0" text="Send To:" />
+                        <TextField fx:id="emailToField" layoutX="210.0" layoutY="20.0" prefHeight="25.0" prefWidth="378.0" />
+                        <Label layoutX="40.0" layoutY="74.0" text="Send From:" />
+                        <Label layoutX="40.0" layoutY="124.0" text="Host Name:" />
+                        <Label layoutX="40.0" layoutY="174.0" text="Username:" />
+                        <Label layoutX="40.0" layoutY="224.0" text="Password" />
+                        <TextField fx:id="emailFromField" layoutX="210.0" layoutY="70.0" prefHeight="25.0" prefWidth="378.0" />
+                        <TextField fx:id="hostNameField" layoutX="210.0" layoutY="120.0" prefHeight="25.0" prefWidth="265.0" />
+                        <Label layoutX="488.0" layoutY="124.0" text="Port:" />
+                        <TextField fx:id="portField" layoutX="523.0" layoutY="120.0" prefHeight="25.0" prefWidth="65.0" />
+                        <TextField fx:id="userNameField" layoutX="210.0" layoutY="170.0" prefHeight="25.0" prefWidth="378.0" />
+                        <TextField fx:id="passwordField" layoutX="212.0" layoutY="220.0" prefHeight="25.0" prefWidth="378.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="SMS             ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="24.0" text="Send Alerts To:" />
+                        <TextField fx:id="toPhoneNumberField" layoutX="210.0" layoutY="20.0" prefWidth="378.0" />
+                        <Label layoutX="14.0" layoutY="74.0" text="SMS Service Center Number:" />
+                        <TextField fx:id="messageServiceCenterNumberField" layoutX="210.0" layoutY="70.0" prefWidth="378.0" />
+                        <Label layoutX="14.0" layoutY="124.0" text="Custom Alert Text:" />
+                        <TextField fx:id="smsCustomAlertTextField" layoutX="210.0" layoutY="120.0" prefWidth="378.0" />
+                        <Label layoutX="210.0" layoutY="174.0" text="Modem Name:" />
+                        <TextField fx:id="modemNameField" layoutX="297.0" layoutY="170.0" prefHeight="25.0" prefWidth="94.0" />
+                        <Label layoutX="412.0" layoutY="174.0" text="Modem Port:" />
+                        <TextField fx:id="modemPortField" layoutX="494.0" layoutY="170.0" prefHeight="25.0" prefWidth="94.0" />
+                        <Label layoutX="210.0" layoutY="224.0" text="PIN:" />
+                        <TextField fx:id="modemPinField" layoutX="297.0" layoutY="220.0" prefHeight="25.0" prefWidth="94.0" />
+                        <Label layoutX="412.0" layoutY="224.0" text="Bitrate:" />
+                        <TextField fx:id="modemBitrateField" layoutX="494.0" layoutY="220.0" prefHeight="25.0" prefWidth="94.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Upload      ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="24.0" text="Upload Interval:" />
+                        <TextField fx:id="uploadIntervalMinsField" layoutX="130.0" layoutY="20.0" prefHeight="25.0" prefWidth="109.0" />
+                        <Label layoutX="244.0" layoutY="24.0" text="Minutes" />
+                        <Label layoutX="14.0" layoutY="94.0" text="App Key:" />
+                        <TextField fx:id="appKeyField" editable="false" layoutX="130.0" layoutY="90.0" prefWidth="378.0" />
+                        <Label layoutX="14.0" layoutY="146.0" text="App Secret:" />
+                        <TextField fx:id="appSecretField" editable="false" layoutX="130.0" layoutY="140.0" prefWidth="378.0" />
+                        <Label layoutX="14.0" layoutY="194.0" text="Access Token:" />
+                        <TextField fx:id="accessTokenField" editable="false" layoutX="130.0" layoutY="190.0" prefWidth="378.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Recording   ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="32.0" text="Continuous Mode Recording Length:" />
+                        <TextField fx:id="recordTimeContSecsField" layoutX="240.0" layoutY="28.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label layoutX="298.0" layoutY="32.0" text="Seconds" />
+                        <Label layoutX="14.0" layoutY="83.0" text="Detection Mode Recording Length:" />
+                        <TextField fx:id="recordTimeDetectionSecsField" layoutX="240.0" layoutY="79.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label layoutX="298.0" layoutY="83.0" text="Seconds" />
+                        <Label layoutX="14.0" layoutY="134.0" text="Width:" />
+                        <TextField fx:id="recordingWidthField" layoutX="174.0" layoutY="132.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label layoutX="350.0" layoutY="135.0" text="Height:" />
+                        <TextField fx:id="recordingHeightField" layoutX="454.0" layoutY="130.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label layoutX="14.0" layoutY="182.0" text="Frame Rate:" />
+                        <TextField fx:id="recordingFrameRateField" layoutX="174.0" layoutY="182.0" prefHeight="25.0" prefWidth="51.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="43.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="557.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefWidth="80.0" text="Save" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="15.0" />
+            <Button layoutX="467.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="80.0" text="Cancel" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="105.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

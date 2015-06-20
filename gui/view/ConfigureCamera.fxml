@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="262.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miniproject.gui.controller.ConfigureCameraController">
+   <bottom>
+      <Pane prefHeight="130.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="256.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefWidth="80.0" text="Save" />
+            <Button layoutX="165.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="80.0" text="Cancel" />
+            <Button fx:id="deleteButton" layoutX="75.0" layoutY="14.0" maxWidth="200.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="50.0" prefWidth="200.0" text="Delete This Camera" />
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="124.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="28.0" layoutY="34.0" prefHeight="17.0" prefWidth="56.0" text="Name" />
+            <TextField fx:id="cameraNameField" layoutX="125.0" layoutY="30.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="28.0" layoutY="64.0" prefHeight="17.0" prefWidth="56.0" text="ID" />
+            <TextField fx:id="cameraIdField" layoutX="125.0" layoutY="60.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="28.0" layoutY="97.0" prefHeight="17.0" prefWidth="56.0" text="Mode" />
+            <ChoiceBox fx:id="cameraModeChoiceBox" layoutX="125.0" layoutY="93.0" prefHeight="25.0" prefWidth="209.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
